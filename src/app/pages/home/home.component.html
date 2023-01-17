@@ -1,0 +1,53 @@
+
+<div class="w-[80%] mx-auto py-5 text-center">
+    <h1 class="pb-2 font-bold text-center text-2xl">{{titulo}}</h1>
+    <img src="https://miro.medium.com/max/480/1*VKY-Ldkt-iHobItql7G_5w.png" 
+    class="mx-[15rem] zoom" alt="">
+    <button type="button" class="mx-auto text-white bg-red-300 px-4 py-3
+    rounded shadow-lg shadow-gray-400 hover:bg-red-700" (click)="getmostrar()">Mostrar</button>
+
+    <div class="w-[80%] mx-auto mt-[4rem] bg-slate-50 shadow-lg shadow-gray-400 rounded text-center">
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+                  <table class="min-w-full">
+                    <thead class="border-b" >
+                      <tr >
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center" id="elemento">
+                            {{CODIGO}}   
+                          </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center" id="elemento">
+                            {{ID}}       
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center" id="elemento">
+                            {{TITLE}}     
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center" id="elemento">
+                            {{BODY}} 
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-b text-center"   *ngFor="let data of arrayusers; let i =index">
+                        <td class="  py-4 px-4 text-xs  text-gray-900" >
+                            {{i+1}}
+                        </td>
+                        <td class="text-xs text-gray-900 font-light py-4 px-4  " >
+                            {{data.id}}
+                        </td>
+                        <td class="text-xs text-gray-900 font-light  py-4 px-4  " >
+                            {{data.title}}
+                        </td>
+                        <td class="text-xs text-gray-900 font-light py-4 px-4  " >
+                            {{data.body}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>    
+</div>
